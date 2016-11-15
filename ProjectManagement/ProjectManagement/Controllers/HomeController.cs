@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,10 +15,13 @@ namespace ProjectManagement.Controllers
         }
 
         public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        { 
 
-            return View();
+            var model = new AboutModel();
+            model.Message = "Hello";
+            model.Author = "CF";
+
+            return View(model);
         }
 
         public ActionResult Contact()
@@ -26,5 +30,21 @@ namespace ProjectManagement.Controllers
 
             return View();
         }
+
+        public double medie () {
+            var list = new List<int> { 1, 3, 7};
+            // return list.Average();
+            int sum = 0;
+           foreach (int i in list){
+                sum += i;
+
+            }
+            return sum / list.Count();
+        }
+
+        public ActionResult HelloWorld() {
+            return Content("Hello World!");
+        }
+
     }
 }

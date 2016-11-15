@@ -1,7 +1,51 @@
 ﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+    @model ProjectManagement.Models.AboutModel
+    
 
+}
+<h2>@Model.Message</h2>
+<h3 style="color:orange;"> @Model.Author </h3>
+
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        div {
+            text-align: justify;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            </tr>
+
+        <tr>
+            <td>Florin</td>
+            <td>Cirtina</td>
+            <td>23</td>
+            </tr>
+          
+       
+        
+        </table>
+
+    <div>
+        Primul rand.</br>
+        Al doilea rand.</br>
+        Al treilea rand.</br>
+        </div>
+
+    </body>
+    
 <p>Use this area to provide additional information.</p>
