@@ -30,7 +30,7 @@ namespace ProjectManagement.Controllers
 
             return View();
         }
-
+        //Exercise 3 - Course 6
         public double medie () {
             var list = new List<int> { 1, 3, 7};
             // return list.Average();
@@ -41,9 +41,22 @@ namespace ProjectManagement.Controllers
             }
             return sum / list.Count();
         }
-
+        // Exercise 4 - Course 6
         public ActionResult HelloWorld() {
             return Content("Hello World!");
+        }
+
+        //Exercise 9 - Course 6
+        public ActionResult RedirectToActionInHomeController() {
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult RedirectToRoute(){
+            return RedirectToRoute ("Index");
+        }
+
+        public ActionResult ReturnFile() {
+            return Content("dd");
         }
 
     }
