@@ -52,11 +52,11 @@ namespace ProjectManagement.Controllers
         }
 
         public ActionResult RedirectToRoute(){
-            return RedirectToRoute ("Index");
+            return RedirectToRoute ("About");
         }
 
         public ActionResult ReturnFile() {
-            return Content("dd");
+            return Content ("Site.css");
         }
 
     }

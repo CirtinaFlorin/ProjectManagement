@@ -9,14 +9,21 @@ namespace ProjectManagement.Controllers
 {
     public class ActionResultController : Controller
     {
+
+
         //Exercise 8 - Course 6
-        //public ActionResult RedirectPermanent(string "http://www.google.com") {
-        //    return RedirectResult ("This message is sent from the Index action!");
+        public ActionResult Index()
+        {
+            return Content("This message is sent from the Index action!");
+        }
 
-        //}
+        public ActionResult RedirectPermanent() {
+            return RedirectPermanent ("http://www.google.com");
 
-        //public ActionResult RedirectToActionInTheSameController(){
-        //    return RedirectToAction ("This message is sent from the Index Action");
-        //}
-    }
+        }
+
+            public ActionResult RedirectToActionInTheSameController(){
+               return RedirectToAction ("Index");
+            }
+        }
 }
